@@ -27,7 +27,8 @@ export interface ImagePreviewType
 let uuid = 0;
 
 export interface ImageProps
-  extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'placeholder' | 'onClick'> {
+  extends Omit<React.ImgHTMLAttributes<HTMLImageElement>, 'placeholder' | 'onClick'>,
+    React.RefAttributes<HTMLImageElement> {
   // Original
   src?: string;
   wrapperClassName?: string;
